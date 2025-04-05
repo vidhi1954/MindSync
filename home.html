@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url("{{ url_for('static', filename='bg.avif') }}");
+            background-size: cover;
+            margin: 0 100px;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #af4c4c;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #af4c4c;
+            padding: 10px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+            display: inline-block;
+        }
+        a:hover {
+            background-color: #922d2d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <i class="material-icons" style="font-size: 48px; color: #af4c4c;">home</i>
+        <h1>Home Page</h1>
+        {% if username %}
+            <p>Hello, <strong>{{ username }}</strong>! You are logged in.</p>
+            <a href="/logout">Logout</a>
+        {% else %}
+            <p>You are not logged in.</p>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        {% endif %}
+    </div>
+</body>
+</html>
