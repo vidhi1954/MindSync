@@ -1,0 +1,9 @@
+Flask
+Flask-Cors
+flask-mysqldb
+requests
+python-dotenv
+numpy
+librosa
+whisper
+soundfile
