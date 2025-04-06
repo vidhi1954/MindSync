@@ -13,6 +13,5 @@ openai-whisper
 soundfile
 gunicorn
 pandas
-matplotlib
 seaborn
 google-generativeai
