@@ -58,7 +58,8 @@ def get_gemini_response(emotion, text):
 
     response = requests.post(url, json=data, headers=headers).json()
     print("generating response")
-    return (f"Response: {response["candidates"][0]["content"]["parts"][0]["text"]}")
+    return f"Response: {response['candidates'][0]['content']['parts'][0]['text']}"
+
 
     # try:
     #     model = genai.GenerativeModel("gemini-pro")
