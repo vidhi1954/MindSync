@@ -5,6 +5,8 @@ requests
 python-dotenv
 numpy
 librosa
+tensorflow
+keras
 torch
 torchaudio
 whisper
