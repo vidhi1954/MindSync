@@ -27,7 +27,10 @@ CORS(flask_app)
 
 # Load speech emotion model
 print("🔹 Loading Speech Emotion Detection model...")
-emotion_model = pickle.load(open(r"D:\VIDHI\C++\GDG\Webapp\SpeechEmoModel.pkl", "rb"))
+model_path = os.path.join(os.path.dirname(__file__), '..', 'SpeechEmoModel.pkl')
+
+with open(model_path, 'rb') as f:
+    emotion_model = pickle.load(f)
 print("✅ Model Loaded Successfully!")
 
 def extract_mfcc(filename):
