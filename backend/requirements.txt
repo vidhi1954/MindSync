@@ -9,7 +9,7 @@ tensorflow
 keras
 torch
 torchaudio
-whisper
+whisper==1.0.0
 soundfile
 gunicorn
 pandas
