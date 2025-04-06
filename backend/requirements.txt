@@ -15,3 +15,4 @@ gunicorn
 pandas
 matplotlib
 seaborn
+google-generativeai
