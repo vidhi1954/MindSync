@@ -31,9 +31,12 @@ app.config['MYSQL_DB'] = 'flask-users'
 mysql = MySQL(app)
 
 # Load emotion detection model
-print("🔹 Loading Speech Emotion Detection model...")
-emotion_model = pickle.load(open(r"D:\VIDHI\C++\GDG\Webapp\SpeechEmoModel.pkl", "rb"))
-print("✅ Model Loaded Successfully!")
+# print("🔹 Loading Speech Emotion Detection model...")
+model_path = os.path.join(os.path.dirname(__file__), '..', 'SpeechEmoModel.pkl')
+
+with open(model_path, 'rb') as f:
+    emotion_model = pickle.load(f)
+# print("✅ Model Loaded Successfully!")
 
 # Routes
 
