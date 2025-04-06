@@ -97,7 +97,7 @@ def predict():
 
         # Transcription using Whisper
         print("🔹 Transcribing audio using Whisper...")
-        whisper_model = whisper.load_model("base")
+        whisper_model = whisper.load_model("tiny")
         result = whisper_model.transcribe(file_path)
         transcription = result["text"]
         print(f"✅ Transcription complete: {transcription}")
