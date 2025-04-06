@@ -12,3 +12,6 @@ torchaudio
 whisper
 soundfile
 gunicorn
+pandas
+matplotlib
+seaborn
